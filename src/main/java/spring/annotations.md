@@ -90,3 +90,34 @@ proxyTargetClass - (boolean) if true then use CGLIB proxy (class-based) instead 
 
 @Resource - can inject bean by name in runtime
 @Lazy -   ленивая инициализация бина - только когда он будет запрошен
+
+
+// tests
+@ExtendWith
+@ContextConfiguration
+
+@DirtiesContext
+@DataJpaTest
+@AutoconfigureTestDatabase // replace= NONE
+
+// transactional tests
+@BeforeTransaction
+@AfterTransaction
+@Commit
+@Rollback
+
+//
+@ActiveProfiles
+
+@SpringBootTest
+@Import
+@TestConfiguration
+
+@DisplayName
+
+@WebMvcTest
+@AutoConfigureMockMvc
+@MockBean
+@WithMockUser (for security)
+
+@WebFluxTest - for reactive

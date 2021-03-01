@@ -60,3 +60,14 @@ strategy:
 SINGLE_TABLE (default) - single table for all entities
 TABLE_PER_CLASS - table on every entity class
 JOINED - specific fields in separate tables, commons - in shared table
+
+@Fetch
+fetchMode: 
+SELECT - for lazy load (causes n+1 problem: one query for element and n for inner collection elements.
+Can be fixed with @BatchSize(size=10))
+JOIN - eager load
+SUBSELECT - for lazy load, inner select syntax
+
+@MapsId -?
+
+@MapKeyColumn - ?
